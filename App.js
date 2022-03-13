@@ -1,20 +1,37 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React, {Component} from 'react';
+import { Text, SytleSheet, View, TouchableOpacity  } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+// import 'react-native-gesture-handler';
+ 
+import Cari from './src/Cari';
+import List from './src/List';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+// const RootStack = createSwitchNavigator ({
+//     "Cari": Cari,
+//     "List": List,
+// });
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+const Stack = createNativeStackNavigator();
+
+const App = () => {
+    return ( 
+        <NavigationContainer>
+            <Stack.Navigator initialRouteName='Cari' screenOptions={{headerShown: false}}>
+                <Stack.Screen name='Cari' component={Cari}/>
+                <Stack.Screen name='List' component={List}/>
+            </Stack.Navigator>
+        </NavigationContainer>
+    );
+};
+// export default class App extends React.Component {
+//     render(){
+//         return <RootStack/>
+//     }
+// }
+
+export default App;
+
+//Yang belum : 
+//1. Navigasi buat pindah halaman
+//3. Icon
