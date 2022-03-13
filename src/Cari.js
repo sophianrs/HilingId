@@ -18,12 +18,6 @@ class Cari extends React.Component {
         };
     }
 
-    // Cari = () => {
-    //     this.setState({
-    //         isCari: true
-    //     })
-    // }
-
     render() {
         const { LokasiBerangkat, LokasiTujuan, Tanggal, navigation } = this.state;
         return (
@@ -71,11 +65,7 @@ class Cari extends React.Component {
                         title='Cari'
                         onPress={()=> this.props.navigation.navigate('List')}
                     />
-                    {/* {isCari && (
-                        <Text style={{marginTop: 20}}>
-                            Selamat Jadwal Berhasil Ditemukan!
-                        </Text>
-                    )}      */}
+
                 </View>
                 <Text style={styles.copyright}> COPYRIGHT Sophia Nouriska - 119140027 </Text>
             </View>
@@ -142,81 +132,4 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
     }
 });
-
-// const DATA = [
-//   {
-//     id: "bd7acbea-c1b1-46c2-aed5-3ad53abb28ba",
-//     bandara_kode_keberangkatan: "LPG",
-//     bandara_kode_tujuan: "JKT",
-//     maskapai_nama:"Elang",
-//     Tanggal:"Tanggal Keberangkatan",
-
-//   },
-//   {
-//     id: "3ac68afc-c605-48d3-a4f8-fbd91aa97f63",
-//     bandara_kode_keberangkatan: "SBY",
-//     bandara_kode_tujuan: "JKT",
-//     maskapai_nama:"Tapis Air",
-//     Tanggal:"Tanggal Keberangkatan",
-//   },
-//   {
-//     id: "58694a0f-3da1-471f-bd96-145571e29d72",
-//     bandara_kode_keberangkatan: "PLG",
-//     bandara_kode_tujuan: "JKT",
-//     maskapai_nama:"Majapahit Air",
-//     Tanggal:"Tanggal Keberangkatan",
-//   },
-// ];
-
-// const Item = ({ item, onPress, backgroundColor, textColor }) => (
-//   <TouchableOpacity onPress={onPress} style={[styles.item, backgroundColor]}>
-//     <Text style={[styles.bandara_kode_keberangkatan, textColor]}>{item.bandara_kode_keberangkatan} - {item.bandara_kode_tujuan} </Text>
-//     <Text style={[styles.maskapai_nama, textColor]}>{item.maskapai_nama}</Text>
-//     <Text style={[styles.Tanggal, textColor]}>{item.Tanggal}</Text>
-//   </TouchableOpacity>
-// );
-
-// const Cari = () => {
-//   const [selectedId, setSelectedId] = useState(null);
-
-//   const renderItem = ({ item }) => {
-//     const backgroundColor = item.id === selectedId ? "#6e3b6e" : "#f9c2ff";
-//     const color = item.id === selectedId ? 'white' : 'black';
-
-//     return (
-//       <Item
-//         item={item}
-//         onPress={() => setSelectedId(item.id)}
-//         backgroundColor={{ backgroundColor }}
-//         textColor={{ color }}
-//       />
-//     );
-//   };
-
-//   return (
-//     <SafeAreaView style={styles.container}>
-//       <FlatList
-//         data={DATA}
-//         renderItem={renderItem}
-//         keyExtractor={(item) => item.id}
-//         extraData={selectedId}
-//       />
-//     </SafeAreaView>
-//   );
-// };
-
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     marginTop: StatusBar.currentHeight || 0,
-//   },
-//   item: {
-//     padding: 20,
-//     marginVertical: 8,
-//     marginHorizontal: 16,
-//   },
-//   title: {
-//     fontSize: 32,
-//   },
-// });
 export default Cari;

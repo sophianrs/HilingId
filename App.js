@@ -24,14 +24,9 @@ const App = () => {
         </NavigationContainer>
     );
 };
-// export default class App extends React.Component {
-//     render(){
-//         return <RootStack/>
-//     }
-// }
 
 export default App;
 
 //Yang belum : 
 //1. Navigasi buat pindah halaman
-//3. Icon
+//2. Icon

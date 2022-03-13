@@ -69,11 +69,6 @@ const List = () => {
         extraData={selectedId}
       />
 
-      {/* <Button
-       title='Cari'
-       onPress={()=> this.props.navigation.navigate('Cari')}
-       /> */}
-
       <Text style={styles.copyright}> COPYRIGHT Sophia Nouriska - 119140027 </Text>
     </View>
   );
